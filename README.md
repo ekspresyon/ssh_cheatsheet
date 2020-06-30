@@ -20,10 +20,12 @@ In case of failure visit this [ssh-copy-id reference](https://www.ssh.com/ssh/co
 
     ssh-keygen -R "hostname"
 
-This command will remove the specific host key of the named host. If you used IP adress and host names interchangeably, you would have to run the command for each 
+You need to run this, when the hosname is not matching the host key.
+This command will remove the specific host key of the named host. If you used IP adress and host names interchangeably, you would have to run the command for each. 
 
 ### Delete all host keys from client computer
 
     rm -f .ssh/known_hosts
 
-This will delete the known host file and recreate it. All host keys will we removed.
+DANGER: This will delete the known host file and recreate it. All host keys will we removed.
+If you want do that make sure you know your attrubuted username and password on every server/host that you are about to loose the key for. 
